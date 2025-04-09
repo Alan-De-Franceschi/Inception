@@ -2,7 +2,7 @@
 
 service mariadb start
 
-mysql -e "CREATE DATABASE IF NOT EXISTS inception"
+mysql -e "CREATE DATABASE IF NOT EXISTS $SQL_DATABASE"
 
 mysql -e "CREATE USER '$SQL_USER'@'%' IDENTIFIED BY '$SQL_PASS';"
 
