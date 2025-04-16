@@ -1,5 +1,8 @@
 #!/bin/sh
 
+export SQL_PASS=$(cat /run/secrets/db_password)
+export SQL_ROOT_PASS=$(cat /run/secrets/db_root_password)
+
 service mariadb start
 
 mysql -e "CREATE DATABASE IF NOT EXISTS $SQL_DATABASE"
