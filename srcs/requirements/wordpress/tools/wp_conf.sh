@@ -2,9 +2,9 @@
 
 sleep 10
 
-export SQL_PASS=$(cat /run/secrets/db_password)
-export WP_ADMIN_PASS=$(cat /run/secrets/wp_admin_password)
-export WP_USER_PASS=$(cat /run/secrets/wp_user_password)
+SQL_PASS=$(cat ./run/secrets/db_password)
+WP_ADMIN_PASS=$(cat ./run/secrets/wp_admin_password)
+WP_USER_PASS=$(cat ./run/secrets/wp_user_password)
 
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 

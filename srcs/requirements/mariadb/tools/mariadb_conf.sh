@@ -1,7 +1,7 @@
 #!/bin/sh
 
-export SQL_PASS=$(cat /run/secrets/db_password)
-export SQL_ROOT_PASS=$(cat /run/secrets/db_root_password)
+SQL_PASS=$(cat ./run/secrets/db_password)
+SQL_ROOT_PASS=$(cat ./run/secrets/db_root_password)
 
 service mariadb start
 
